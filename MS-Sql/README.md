@@ -27,5 +27,7 @@ Stoppt den laufenden MSSQL Container.
 Stoppt den Container, entfernt alle Volumes und löscht das Verzeichnis für die Datenbankdateien.
 
 
-## JTL Einstellung DB-Path ( Datenbank erweiterte einstellungen)
-`/var/opt/mssql/data/eazybusiness`
+## JTL Einstellung DB-Path ( Datenbank Expertenmodus)
+`/var/opt/mssql/data/eazybusiness.mdf`
+
+pass
