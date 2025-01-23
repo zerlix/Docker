@@ -1,24 +1,22 @@
 # MSSQL Server für JTL-Wawi
 
 
-# Repository klonen oder Dateien kopieren
 ```bash
-git clone <repository-url>
-cd MS-Sql
+# Verzeichnis für DB Files erstellen
+mkdir mssql
+# Rechte setzen
+sudo chown 10001:10001 mssql
 ```
 
-# Container starten
+
 ```bash
+# Container starten
 docker-compose up -d
-```
 
 # Container und Volumes löschen
-```bash
 docker-compose down -v
-```
 
 # Container neu starten
-```bash
 docker-compose up -d
 ```
 

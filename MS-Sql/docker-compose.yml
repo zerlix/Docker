@@ -15,4 +15,3 @@ services:
           - MSSQL_COLLATION=Latin1_General_CI_AS
           - TZ=Europe/Berlin
           - LANG=de_DE.UTF-8
-          - LC_ALL=de_DE.UTF-8
