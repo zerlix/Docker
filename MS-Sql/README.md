@@ -1,25 +1,31 @@
 # MSSQL Server für JTL-Wawi
 
+Das Skript run.sh bietet einfache Befehle zur Verwaltung des MSSQL Containers
 
+## Installation
 ```bash
-# Verzeichnis für DB Files erstellen
-mkdir mssql
-# Rechte setzen
-sudo chown 10001:10001 mssql
+./run.sh install
 ```
+Erstellt das Verzeichnis für die Datenbankdateien und setzt die notwendigen Berechtigungen.
 
-
+## Starten des Containers
 ```bash
-# Container starten
-docker-compose up -d
-
-# Container und Volumes löschen
-docker-compose down -v
-
-# Container neu starten
-docker-compose up -d
+./run.sh start
 ```
+Startet den MSSQL Container im Hintergrund.
+
+## Stoppen des Containers
+```bash
+./run.sh stop
+```
+Stoppt den laufenden MSSQL Container.
+
+## Entfernen des Containers und der Volumes
+```bash
+./run.sh remove
+```
+Stoppt den Container, entfernt alle Volumes und löscht das Verzeichnis für die Datenbankdateien.
 
 
-## JTL Einstellung DB-Path
+## JTL Einstellung DB-Path ( Datenbank erweiterte einstellungen)
 `/var/opt/mssql/data/eazybusiness`
