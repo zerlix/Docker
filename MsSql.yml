@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+    mssql:
+        container_name: mssql-wawi
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        volumes:
+            - "./mssql:/var/opt/mssql"
+        ports:
+            - "11434:1433"
+        restart: unless-stopped
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=password
+            - MSSQL_PID=Express
+            - MSSQL_COLLATION=Latin1_General_CI_AS
